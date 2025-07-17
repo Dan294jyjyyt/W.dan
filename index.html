@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>FGNA - Home</title>
+<style>
+  /* CHP style inspired color scheme and fonts */
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    color: #1a2e44;
+  }
+  header {
+    background-color: #003366; /* dark navy */
+    color: #ffc72c; /* gold */
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+  }
+  header img {
+    height: 48px;
+    margin-right: 16px;
+  }
+  header h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+  nav {
+    background-color: #0055a5;
+    display: flex;
+    justify-content: center;
+  }
+  nav a {
+    color: #ffc72c;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  nav a:hover,
+  nav a.active {
+    background-color: #ffc72c;
+    color: #003366;
+  }
+  main {
+    max-width: 960px;
+    margin: 24px auto;
+    padding: 0 16px 48px;
+  }
+  #dept-pic-container {
+    margin: 16px 0;
+    text-align: center;
+  }
+  #dept-pic-container img {
+    max-width: 100%;
+    max-height: 240px;
+    border-radius: 8px;
+    border: 2px solid #003366;
+  }
+  #upload-label {
+    display: inline-block;
+    margin-top: 12px;
+    cursor: pointer;
+    color: #003366;
+    font-weight: 600;
+    border: 1px solid #003366;
+    padding: 6px 12px;
+    border-radius: 4px;
+    background-color: #ffc72c;
+  }
+  #dept-pic-input {
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/California_Highway_Patrol_patch.svg/1200px-California_Highway_Patrol_patch.svg.png" alt="FGNA Badge" />
+  <h1>Federal Gang & Narcotics Agency (FGNA)</h1>
+</header>
+
+<nav>
+  <a href="index.html" class="active">Home</a>
+  <a href="documents.html">Documents</a>
+  <a href="chain-of-command.html">Chain of Command</a>
+  <a href="sub-divisions.html">Sub-Divisions</a>
+  <a href="retired-high-command.html">Retired High Command</a>
+</nav>
+
+<main>
+  <h2>Welcome to FGNA</h2>
+  <p><strong>Mission Statement:</strong> To dismantle organized crime and suppress illegal narcotics operations nationwide with integrity and professionalism.</p>
+  <p><strong>Agency Motto:</strong> "Justice Through Strength and Honor."</p>
+
+  <div id="dept-pic-container">
+    <img id="dept-pic" src="https://via.placeholder.com/800x200?text=Department+Picture+Placeholder" alt="Department Picture" />
+    <br />
+    <label for="dept-pic-input" id="upload-label">Upload Department Picture</label>
+    <input type="file" id="dept-pic-input" accept="image/*" />
+  </div>
+</main>
+
+<script>
+  // Upload and preview department picture
+  const deptPicInput = document.getElementById('dept-pic-input');
+  const deptPic = document.getElementById('dept-pic');
+
+  deptPicInput.addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    if (file && file.type.startsWith('image/')) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        deptPic.src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+</script>
+
+</body>
+</html>
