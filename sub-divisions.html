@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>FGNA - Sub-Divisions</title>
+<style>
+  /* Reset & base */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9fbfc;
+    color: #1c223b;
+  }
+  header {
+    background: linear-gradient(90deg, #003366, #001f4d);
+    color: #fcdc3b;
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid #fcdc3b;
+  }
+  header img {
+    height: 54px;
+    margin-right: 20px;
+  }
+  header h1 {
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: 2px;
+    text-shadow: 0 0 5px rgba(252,220,59,0.8);
+  }
+  nav {
+    background-color: #002244;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid #fcdc3b;
+  }
+  nav a {
+    color: #fcdc3b;
+    text-decoration: none;
+    padding: 16px 24px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  nav a.active,
+  nav a:hover {
+    background-color: #fcdc3b;
+    color: #002244;
+    font-weight: 700;
+    border-radius: 4px 4px 0 0;
+  }
+  main {
+    max-width: 960px;
+    margin: 36px auto 60px;
+    padding: 0 24px;
+  }
+  main h2 {
+    color: #003366;
+    font-size: 32px;
+    margin-bottom: 24px;
+    border-left: 6px solid #fcdc3b;
+    padding-left: 12px;
+  }
+  .division {
+    background: white;
+    border: 1px solid #c7d1db;
+    border-radius: 10px;
+    padding: 24px 32px;
+    margin-bottom: 32px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+  }
+  .division-icon {
+    flex-shrink: 0;
+    width: 110px;
+    height: 110px;
+    margin-right: 28px;
+  }
+  .division-icon img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 15px;
+    border: 2px solid #003366;
+    background-color: #fcdc3b;
+    padding: 10px;
+  }
+  .division-content h3 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #002244;
+    letter-spacing: 0.03em;
+  }
+  .division-content p {
+    margin: 8px 0;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #1c223b;
+  }
+  .division-content p strong {
+    color: #003366;
+  }
+  @media (max-width: 700px) {
+    .division {
+      flex-direction: column;
+      text-align: center;
+    }
+    .division-icon {
+      margin-bottom: 16px;
+      margin-right: 0;
+      width: 80px;
+      height: 80px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/California_Highway_Patrol_patch.svg/1200px-California_Highway_Patrol_patch.svg.png" alt="FGNA Badge" />
+  <h1>Federal Gang & Narcotics Agency (FGNA)</h1>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="documents.html">Documents</a>
+  <a href="chain-of-command.html">Chain of Command</a>
+  <a href="sub-divisions.html" class="active">Sub-Divisions</a>
+  <a href="retired-high-command.html">Retired High Command</a>
+  <a href="upload-form.html">Form Upload</a>
+  <a href="calendar.html">Meetings Calendar</a>
+  <a href="control-panel.html">Control Panel</a>
+  <a href="gallery.html">Gallery</a>
+</nav>
+
+<main>
+  <h2>Sub-Divisions</h2>
+
+  <section class="division" id="acu">
+    <div class="division-icon">
+      <img src="acu-logo.png" alt="ACU Logo" />
+    </div>
+    <div class="division-content">
+      <h3>ACU — Air Coastal Unit</h3>
+      <p>The Air Coastal Unit provides aerial and maritime support for FGNA operations, extending surveillance and enforcement capabilities across coastal zones and inland waterways.</p>
+      <p><strong>Focus:</strong> Aerial reconnaissance & coastal patrol</p>
+      <p><strong>Operations:</strong> Aerial surveillance, waterway interdictions, air support during operations</p>
+      <p><strong>Personnel:</strong> Licensed pilots, drone operators, maritime agents</p>
+      <p><strong>Lead:</strong> N/A</p>
+    </div>
+  </section>
+
+  <section class="division" id="giu">
+    <div class="division-icon">
+      <img src="giu-logo.png" alt="GIU Logo" />
+    </div>
+    <div class="division-content">
+      <h3>GIU — Gang Investigation Unit</h3>
+      <p>The Gang Investigation Unit leads long-term investigative efforts into organized gang activity, working to identify, infiltrate, and dismantle criminal networks.</p>
+      <p><strong>Focus:</strong> Gang structure, affiliations, and organized activity</p>
+      <p><strong>Operations:</strong> Undercover ops, gang mapping, affiliations tracking, evidence collection</p>
+      <p><strong>Personnel:</strong> Case agents, field operatives, intelligence specialists</p>
+      <p><strong>Lead:</strong> J. Price</p>
+    </div>
+  </section>
+
+  <section class="division" id="k9">
+    <div class="division-icon">
+      <img src="k9-logo.png" alt="K9 Logo" />
+    </div>
+    <div class="division-content">
+      <h3>K9 — Canine Division</h3>
+      <p>The K9 Division provides essential detection and tracking capabilities, supporting narcotics, weapon, and search operations with trained working dogs.</p>
+      <p><strong>Focus:</strong> Detection and tracking</p>
+      <p><strong>Operations:</strong> Drug/bomb detection, suspect tracking, area sweeps</p>
+      <p><strong>Personnel:</strong> Handlers, trainers, canine specialists</p>
+      <p><strong>Lead:</strong> T. Berd</p>
+    </div>
+  </section>
+
+  <section class="division" id="sert">
+    <div class="division-icon">
+      <img src="sert-logo.png" alt="SERT Logo" />
+    </div>
+    <div class="division-content">
+      <h3>SERT — Special Emergency Response Team</h3>
+      <p>SERT handles high-risk tactical operations, hostage rescues, and specialized counter-gang interventions requiring precision and rapid deployment.</p>
+      <p><strong>Focus:</strong> Tactical response and crisis management</p>
+      <p><strong>Operations:</strong> High-risk warrants, hostage rescue, counter-gang raids</p>
+      <p><strong>Personnel:</strong> Tactical operators, negotiators, crisis responders</p>
+      <p><strong>Lead:</strong> W. Dan</p>
+    </div>
+  </section>
+</main>
+
+</body>
+</html>

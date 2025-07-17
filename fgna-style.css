@@ -1,0 +1,210 @@
+/* FGNA Master Theme */
+:root {
+  --fgna-navy: #0b1c38;
+  --fgna-dark-navy: #112f57;
+  --fgna-gold: #ffc72c;
+  --fgna-light-gold: #ffe34c;
+  --fgna-white: #f9f6f0;
+  --fgna-muted-gold: #d4c46e;
+  --fgna-shadow: rgba(255, 199, 44, 0.5);
+  --fgna-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fgna-font);
+  background: linear-gradient(135deg, var(--fgna-navy), var(--fgna-dark-navy));
+  color: var(--fgna-white);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--fgna-gold);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+header {
+  background: linear-gradient(90deg, #00264d, #003366);
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 12px var(--fgna-shadow);
+  border-bottom: 4px solid var(--fgna-gold);
+  user-select: none;
+  flex-shrink: 0;
+}
+
+header img {
+  height: 56px;
+  margin-right: 20px;
+  filter: drop-shadow(0 0 3px var(--fgna-shadow));
+}
+
+header h1 {
+  font-weight: 900;
+  font-size: 1.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--fgna-gold);
+  margin: 0;
+  text-shadow: 0 0 6px var(--fgna-shadow);
+}
+
+nav {
+  background-color: #003366;
+  display: flex;
+  justify-content: center;
+  box-shadow: inset 0 -2px 0 var(--fgna-gold);
+  user-select: none;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+nav a {
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 16px 26px;
+  color: var(--fgna-gold);
+  border-bottom: 4px solid transparent;
+  transition: border-color 0.3s ease, background-color 0.25s ease;
+}
+
+nav a.active,
+nav a:hover,
+nav a:focus {
+  background-color: var(--fgna-gold);
+  color: #003366;
+  border-bottom-color: #003366;
+  outline: none;
+}
+
+.badge-banner {
+  background-color: var(--fgna-gold);
+  text-align: center;
+  padding: 12px 0;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  flex-shrink: 0;
+}
+
+.badge-banner img {
+  height: 48px;
+  filter: drop-shadow(0 0 2px #00264dcc);
+}
+
+.search-container {
+  max-width: 960px;
+  margin: 22px auto;
+  text-align: center;
+}
+
+.search-container input[type="search"] {
+  width: 360px;
+  max-width: 90%;
+  padding: 14px 18px;
+  font-size: 1rem;
+  border-radius: 28px;
+  border: 2.5px solid var(--fgna-gold);
+  outline-offset: 4px;
+  outline-color: var(--fgna-gold);
+  background-color: var(--fgna-dark-navy);
+  color: var(--fgna-white);
+  box-shadow: 0 0 12px var(--fgna-shadow);
+  transition: background-color 0.25s ease, border-color 0.3s ease;
+}
+
+.search-container input[type="search"]::placeholder {
+  color: var(--fgna-muted-gold);
+  font-weight: 600;
+}
+
+.search-container input[type="search"]:focus {
+  background-color: #1e497a;
+  border-color: var(--fgna-light-gold);
+  box-shadow: 0 0 18px var(--fgna-light-gold);
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto 48px;
+  padding: 0 24px;
+  flex-grow: 1;
+}
+
+h2 {
+  font-weight: 900;
+  font-size: 2.4rem;
+  margin-top: 40px;
+  margin-bottom: 8px;
+  letter-spacing: 1.5px;
+  text-shadow: 0 0 8px var(--fgna-gold);
+  color: var(--fgna-gold);
+  text-align: center;
+}
+
+p.intro {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--fgna-muted-gold);
+  max-width: 600px;
+  margin: 0 auto 40px;
+  text-align: center;
+  line-height: 1.4;
+  text-shadow: 0 0 6px #aa9524aa;
+}
+
+ul.threat-list {
+  max-width: 680px;
+  margin: 0 auto 40px;
+  padding-left: 20px;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: var(--fgna-white);
+}
+
+ul.threat-list li strong {
+  color: var(--fgna-gold);
+}
+
+footer {
+  background: #00264d;
+  color: var(--fgna-gold);
+  text-align: center;
+  padding: 18px 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  user-select: none;
+  box-shadow: inset 0 2px 0 var(--fgna-gold);
+  margin-top: auto;
+}
+
+/* Responsive */
+
+@media (max-width: 520px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+  nav a {
+    padding: 14px 16px;
+    font-size: 0.9rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  .search-container input[type="search"] {
+    width: 280px;
+  }
+}
